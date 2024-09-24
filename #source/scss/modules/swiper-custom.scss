@@ -1,0 +1,39 @@
+.swiper-numbered .swiper-pagination {
+  counter-reset: thumbnail-number;
+}
+
+.swiper-numbered .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  color: #fff;
+  background: transparent;
+  opacity: 1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.swiper-numbered .swiper-pagination-bullet::after {
+  width: 0;
+  content: "";
+  border-bottom: 3px solid;
+  transition: inherit;
+}
+
+.swiper-numbered .swiper-pagination-bullet::before {
+  content: counter(thumbnail-number, decimal-leading-zero);
+  counter-increment: thumbnail-number;
+}
+
+.swiper-numbered .swiper-pagination-bullet:hover,
+.swiper-numbered .swiper-pagination-bullet-active {
+  color: $text-active;
+}
+
+.swiper-numbered .swiper-pagination-bullet-active::after {
+  width: 13px;
+  margin-left: 0.5rem;
+}

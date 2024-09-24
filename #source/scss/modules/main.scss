@@ -1,0 +1,138 @@
+body {
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.intro-section {
+  background: $section-gray;
+  display: flex;
+
+  header {
+    width: 100%;
+    z-index: 2;
+    transition: 0.2s;
+
+    a {
+      color: $white;
+      font-weight: 400;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: $text-active;
+      }
+    }
+
+    img {
+      width: 274px;
+      max-width: 100%;
+    }
+  }
+}
+
+.main-swiper {
+  &.swiper {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+    h2 {
+      font-weight: 900;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: "Crimson Text";
+      font-style: italic;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-family: "Lato";
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    margin: 1rem 0 !important;
+    display: flex;
+  }
+
+  .main-pagination-bullets {
+    left: auto;
+    top: 50%;
+    right: 10px;
+    bottom: auto;
+    width: auto;
+    transform: translate3d(0px, -50%, 0);
+  }
+}
+
+.menu-fixed-long,
+.menu-fixed-short,
+.menu-default-short {
+  header {
+    background: #1b2125e6;
+    height: 60px;
+    position: fixed;
+    top: 0;
+  }
+}
+
+.menu-default-short {
+  .main-swiper {
+    &.swiper {
+      min-height: calc(100vh - 60px);
+      margin-top: 60px;
+    }
+  }
+}
+
+.menu-default-long {
+  header {
+    position: absolute;
+    height: 134px;
+  }
+}
+
+.icon-button {
+  background: none;
+  border: none;
+}
+
+.menu-button {
+  max-width: 50px;
+}
+
+.god-text-section {
+  background: $white;
+
+  h3 {
+    color: $text-gray;
+    border-left: 3px $text-border solid;
+    padding-left: 1rem;
+    margin: 4rem 0;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .swiper-horizontal .swiper-pagination-bullets {
+    right: 130px;
+  }
+}

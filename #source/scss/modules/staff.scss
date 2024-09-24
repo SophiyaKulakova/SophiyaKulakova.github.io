@@ -1,0 +1,53 @@
+.staff-poster {
+    position: relative;
+}
+
+
+.clergy-staff {
+    padding: 100px 0;
+    background-color: white;
+    color: #272B37;
+
+    .clergy-staff-content {
+        margin-top: 3rem;
+    }
+}
+
+
+.staff-content {
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+
+    .staff-title {
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .staff-meta {
+        font-family: "Lato";
+        font-style: italic;
+    }
+
+    .staff-text {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+    }
+}
+
+
+
+.person-media {
+    overflow: hidden;
+    position: relative;
+}
+.zoom-effect {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.15);
+  }
